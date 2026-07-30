@@ -386,7 +386,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- 8. HAKKIMIZDA SECTION --- */}
+      {/* --- 8. HAKKIMIZDA SECTIONn --- */}
       <section className={styles.aboutSection} id="hakkimizda">
         <div className={styles.container}>
           <div className={styles.aboutGrid}>
