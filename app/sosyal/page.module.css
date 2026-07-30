@@ -1,0 +1,213 @@
+.container {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 1.5rem 4rem 1.5rem;
+    background-color: var(--color-bg);
+}
+
+.bgOverlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- PROFİL ALANI --- */
+.profileSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.avatarWrapper {
+    position: relative;
+    width: 128px;
+    height: 128px;
+    margin-bottom: 1.2rem;
+}
+
+.avatarGlow {
+    position: absolute;
+    inset: -4px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    filter: blur(12px);
+    opacity: 0.6;
+}
+
+/* Sadece eklenen / güncellenen kısım */
+.avatarInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    /* İç boşluğu tamamen sıfırladık, logo kenarlara dayansın */
+}
+
+.logoImg {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    /* 'contain' yerine 'cover' veya 'contain' kalıp scale verebilirsin */
+    transform: scale(1);
+    /* Görseli çemberin içinde %15 daha büyütür */
+}
+
+.avatarText {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-white);
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    color: var(--color-white);
+    margin-bottom: 0.25rem;
+}
+
+.subtitle {
+    color: var(--color-gray);
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+}
+
+.locationBadge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 99px;
+    font-size: 0.8rem;
+    color: var(--color-white);
+}
+
+/* --- LINK KARTLARI --- */
+.linksContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.linkCard {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    text-decoration: none;
+    color: var(--color-white);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.linkCard:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(220, 68, 41, 0.4);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.icon {
+    font-size: 1.6rem;
+}
+
+.linkText {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.linkText strong {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.linkText small {
+    font-size: 0.8rem;
+    color: var(--color-gray);
+    margin-top: 0.2rem;
+}
+
+.arrow {
+    font-size: 1.2rem;
+    color: var(--color-gray);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.linkCard:hover .arrow {
+    color: var(--color-primary);
+    transform: translateX(4px);
+}
+
+/* Öne Çıkan Menü Kartı */
+.highlightCard {
+    background: linear-gradient(135deg, rgba(220, 68, 41, 0.2) 0%, rgba(17, 17, 17, 0.8) 100%);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 20px rgba(220, 68, 41, 0.2);
+}
+
+.highlightCard:hover {
+    background: var(--color-primary);
+}
+
+.highlightCard:hover .linkText small,
+.highlightCard:hover .arrow {
+    color: white;
+}
+
+/* Platform Özel Hover Renkleri */
+.tyCard:hover {
+    border-color: #fa6501;
+}
+
+.ysCard:hover {
+    border-color: #ea004b;
+}
+
+/* --- FOOTER --- */
+.footerNote {
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--color-gray);
+    font-size: 0.85rem;
+}
+
+.footerNote a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footerNote a:hover {
+    color: var(--color-primary);
+}

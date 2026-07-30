@@ -1,49 +1,47 @@
+/* app/globals.css */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --color-bg: #161616;
+  /* Görseldeki orta şerit (Koyu Gri/Siyah) */
+  --color-primary: #DC4429;
+  /* Görseldeki sağ şerit (Canlı Turuncu/Kırmızı) */
+  --color-white: #F8F8F8;
+  /* Görseldeki sol şerit (Kırık Beyaz) */
+  --color-gray: #9ca3af;
+  --font-main: "Outfit", sans-serif;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+body {
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  font-family: var(--font-main);
+  overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Tasarımı */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
 }

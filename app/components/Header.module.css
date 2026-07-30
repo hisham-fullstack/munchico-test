@@ -1,0 +1,322 @@
+/* =============================
+   ANA HEADER (FLOATING ISLAND)
+============================= */
+.header {
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 1200px;
+    background: rgba(22, 22, 22, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 100px;
+    /* Kapsül görünümü */
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    z-index: 1000;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Scroll Sonrası Daralan Header Efekti */
+.header.scrolled {
+    top: 0.5rem;
+    width: 90%;
+    max-width: 1000px;
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-color: rgba(220, 68, 41, 0.2);
+    /* Yeni kırmızı/turuncu tonu parlaması */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 0.25rem 0.75rem 0.25rem 1.5rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* =============================
+   LOGO
+============================= */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    z-index: 1001;
+}
+
+.logoText {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--color-white);
+    letter-spacing: 0.05em;
+    transition: 0.3s ease;
+}
+
+/* Awwwards stili marka vurgu noktası */
+.logoDot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--color-primary);
+}
+
+.logo:hover .logoText {
+    color: var(--color-primary);
+}
+
+/* =============================
+   MASAÜSTÜ NAVİGASYON
+============================= */
+.desktopNav {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .desktopNav {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+    }
+}
+
+.navLink {
+    position: relative;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navLink::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navLink:hover {
+    color: var(--color-white);
+}
+
+.navLink:hover::after,
+.activeLink::after {
+    width: 100%;
+}
+
+.activeLink {
+    color: var(--color-white);
+}
+
+/* =============================
+   SAĞ AKSİYONLAR & BUTON
+============================= */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1001;
+}
+
+/* Mikro Etkileşimli Sipariş Butonu */
+.btnOrder {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.6rem 1.2rem;
+    border-radius: 99px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btnIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.btnOrder:hover {
+    background-color: var(--color-white);
+    color: var(--color-bg);
+    box-shadow: 0 0 20px rgba(220, 68, 41, 0.4);
+}
+
+.btnOrder:hover .btnIcon {
+    transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+    .btnText {
+        display: none;
+    }
+
+    .btnOrder {
+        padding: 0.6rem;
+        border-radius: 50%;
+    }
+
+    .btnOrder:hover .btnIcon {
+        transform: translateX(0) scale(1.1);
+    }
+}
+
+/* =============================
+   AWWWARDS STİLİ HAMBURGER
+============================= */
+.hamburger {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 992px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+.burgerLines {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 24px;
+}
+
+.burgerLines span {
+    display: block;
+    height: 2px;
+    background-color: var(--color-white);
+    border-radius: 2px;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), width 0.3s ease;
+}
+
+.burgerLines span:nth-child(1) {
+    width: 100%;
+}
+
+.burgerLines span:nth-child(2) {
+    width: 60%;
+    margin-left: auto;
+}
+
+.hamburger:hover .burgerLines span:nth-child(2) {
+    width: 100%;
+    background-color: var(--color-primary);
+}
+
+.hamburger.active .burgerLines span:nth-child(1) {
+    transform: translateY(4px) rotate(45deg);
+    width: 100%;
+}
+
+.hamburger.active .burgerLines span:nth-child(2) {
+    transform: translateY(-4px) rotate(-45deg);
+    width: 100%;
+}
+
+/* =============================
+   TAM EKRAN MOBİL MENÜ
+============================= */
+.mobileMenu {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobileMenu.menuOpen {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.menuBackground {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: -1;
+}
+
+.mobileNavLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.mobileNavLinks a {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-gray);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobileMenu.menuOpen .mobileNavLinks a {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Kademeli (Staggered) geliş efekti için gecikmeler */
+.mobileMenu.menuOpen .mobileNavLinks a:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.mobileMenu.menuOpen .mobileNavLinks a:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.mobileMenu.menuOpen .mobileNavLinks a:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.mobileMenu.menuOpen .mobileNavLinks a:nth-child(4) {
+    transition-delay: 0.25s;
+}
+
+.mobileMenu.menuOpen .mobileNavLinks a:nth-child(5) {
+    transition-delay: 0.3s;
+}
+
+.mobileNavLinks a:hover,
+.mobileActive {
+    color: var(--color-primary) !important;
+}
