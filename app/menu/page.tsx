@@ -373,10 +373,10 @@ export default function MenuPage() {
             <div className={styles.footerNavGroup}>
               <div className={styles.footerNavCol}>
                 <h4>NAVİGASYON</h4>
-                <Link href="#anasayfa">Anasayfa</Link>
-                <Link href="#nasil-yapiyoruz">Mutfak Sırları</Link>
-                <Link href="#hakkimizda">Hikayemiz</Link>
-                <Link href="#subelerimiz">Demirtaş Şubesi</Link>
+                <Link href="/#anasayfa">Anasayfa</Link>
+                <Link href="/#nasil-yapiyoruz">Mutfak Sırları</Link>
+                <Link href="/#hakkimizda">Hikayemiz</Link>
+                <Link href="/#subelerimiz">Demirtaş Şubesi</Link>
               </div>
 
               <div className={styles.footerNavCol}>
