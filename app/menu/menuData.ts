@@ -498,7 +498,7 @@ export const menuData: MenuCategory[] = [
         description: "",
         price: 50,
         currency: "TL",
-        img: "/assets/menu/icecekler/yedigun.webp",
+        img: "/assets/menu/icecekler/yedigun_sise.webp",
       },
       {
         name: "Fruko Şişe (25 Cl)",
