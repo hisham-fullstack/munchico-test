@@ -1,10 +1,10 @@
 "use client";
+import Link from "next/link";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { menuData, MenuCategory } from "./menuData";
 import styles from "./page.module.css";
-import Link from "next/link";
 
 const truncateText = (text: string, maxLength: number) => {
   if (text.length <= maxLength) return text;
@@ -24,9 +24,45 @@ export default function MenuPage() {
   const [touchStart, setTouchStart] = useState<number>(0);
   const [touchEnd, setTouchEnd] = useState<number>(0);
 
+  // Görünüm değiştiğinde en üste kaydırma
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [selectedCategory, selectedProductIndex]);
+
+  // YENİ: Telefondaki Fiziksel Geri Tuşunu Dinleyen useEffect
+  useEffect(() => {
+    const handlePopState = () => {
+      if (selectedProductIndex !== null) {
+        // Ürün detayındayken geri basıldıysa kategoriye (ürün listesine) dön
+        setSelectedProductIndex(null);
+      } else if (selectedCategory !== null) {
+        // Kategori listesindeyken geri basıldıysa ana menüye dön
+        setSelectedCategory(null);
+      }
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, [selectedCategory, selectedProductIndex]);
+
+  // YENİ: Kategori Seçildiğinde Çalışacak Fonksiyon
+  const handleCategorySelect = (category: MenuCategory) => {
+    window.history.pushState({ view: "category" }, "");
+    setSelectedCategory(category);
+  };
+
+  // YENİ: Ürün Seçildiğinde Çalışacak Fonksiyon
+  const handleProductSelect = (index: number) => {
+    window.history.pushState({ view: "product" }, "");
+    setSelectedProductIndex(index);
+  };
+
+  // YENİ: Ekranda Görünen "Geri Dön" Butonları İçin (Tarayıcı geçmişini tetikler)
+  const handleGoBack = () => {
+    window.history.back();
+  };
 
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStart(e.targetTouches[0].clientX);
@@ -89,11 +125,10 @@ export default function MenuPage() {
                 <div
                   key={index}
                   className={styles.floatingCard}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={() => handleCategorySelect(category)} /* DEĞİŞTİ */
                 >
                   <div className={styles.floatingImgWrapper}>
                     <Image
-                      /* YENİ: Resim yolunun başına BASE_PATH ekleniyor */
                       src={`${category.items[0]?.img || "/assets/menu/placeholder.webp"}`}
                       alt={category.categoryName}
                       fill
@@ -120,7 +155,7 @@ export default function MenuPage() {
           <div className={styles.viewSlideUp}>
             <div className={styles.topBar}>
               <button
-                onClick={() => setSelectedCategory(null)}
+                onClick={handleGoBack} /* DEĞİŞTİ */
                 className={styles.backBtn}
               >
                 <svg
@@ -153,17 +188,19 @@ export default function MenuPage() {
                 <div
                   key={index}
                   className={styles.productCard}
-                  onClick={() => setSelectedProductIndex(index)}
+                  onClick={() => handleProductSelect(index)} /* DEĞİŞTİ */
                 >
                   <div className={styles.productImgWrapper}>
                     <Image
-                      /* YENİ: Resim yolunun başına BASE_PATH ekleniyor */
                       src={`${item.img || "/assets/menu/placeholder.webp"}`}
                       alt={item.name}
                       fill
                       sizes="(max-width: 768px) 100vw, 300px"
                       className={styles.productImg}
-                    />
+                      priority={
+                        index < 6
+                      } /* YENİ: İlk 6 resmi lazy-load yapmadan anında yükle */
+                    />{" "}
                   </div>
                   <div className={styles.productInfo}>
                     <div className={styles.productTitleRow}>
@@ -195,7 +232,7 @@ export default function MenuPage() {
           >
             <div className={styles.topBar}>
               <button
-                onClick={() => setSelectedProductIndex(null)}
+                onClick={handleGoBack} /* DEĞİŞTİ */
                 className={styles.backBtn}
               >
                 <svg
@@ -261,7 +298,6 @@ export default function MenuPage() {
                   <div className={styles.sliderImgWrapper}>
                     <div className={styles.sliderImgReveal}>
                       <Image
-                        /* YENİ: Resim yolunun başına BASE_PATH ekleniyor */
                         src={`${selectedCategory.items[selectedProductIndex].img || "/assets/menu/placeholder.webp"}`}
                         alt={selectedCategory.items[selectedProductIndex].name}
                         fill
@@ -328,7 +364,7 @@ export default function MenuPage() {
                 <span className={styles.logoDot}></span>
               </div>
               <p className={styles.footerMotto}>
-                Altın sarısı çıtır tavuklar, devasa burgerler ve unutulmaz
+                Nar gibi kızarmış çıtır tavuklar, devasa burgerler ve unutulmaz
                 Munchico lezzet deneyimi.
               </p>
             </div>
@@ -337,10 +373,10 @@ export default function MenuPage() {
             <div className={styles.footerNavGroup}>
               <div className={styles.footerNavCol}>
                 <h4>NAVİGASYON</h4>
-                <Link href="/">Anasayfa</Link>
-                <Link href="/#nasil-yapiyoruz">Mutfak Sırları</Link>
-                <Link href="/#hakkimizda">Hikayemiz</Link>
-                <Link href="/#subelerimiz">Demirtaş Şubesi</Link>
+                <Link href="#anasayfa">Anasayfa</Link>
+                <Link href="#nasil-yapiyoruz">Mutfak Sırları</Link>
+                <Link href="#hakkimizda">Hikayemiz</Link>
+                <Link href="#subelerimiz">Demirtaş Şubesi</Link>
               </div>
 
               <div className={styles.footerNavCol}>
