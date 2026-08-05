@@ -5,11 +5,18 @@
     position: relative;
     min-height: 100vh;
     background-color: #050505;
-    /* Tam siyah değil, ultra derin gri */
-    padding: 8rem 0 5rem 0;
+    /* Mobilde üst boşluğu azalttık (8rem'den 4rem'e) */
+    padding: 4rem 0 3rem 0;
     color: #f5f5f5;
     overflow-x: hidden;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Masaüstü için menuLayout padding değerini geri veriyoruz */
+@media (min-width: 768px) {
+    .menuLayout {
+        padding: 8rem 0 5rem 0;
+    }
 }
 
 /* Şık ve temiz Flat Altıgen (Honeycomb) Dokusu */
@@ -85,7 +92,15 @@
 ========================================= */
 .header {
     text-align: center;
-    margin-bottom: 5rem;
+    /* Mobilde alt boşluğu azalttık (5rem'den 2.5rem'e) */
+    margin-bottom: 2.5rem;
+}
+
+/* Masaüstü için header margin değerini geri veriyoruz */
+@media (min-width: 768px) {
+    .header {
+        margin-bottom: 5rem;
+    }
 }
 
 .mainTitle {
@@ -213,7 +228,15 @@
    GÖRÜNÜM 2: ÜRÜN LİSTESİ (Glassmorphism)
 ========================================= */
 .topBar {
-    margin-bottom: 3rem;
+    /* Geri dön butonu ve altındaki boşluk mobilde daha dar olacak */
+    margin-bottom: 1.5rem;
+}
+
+/* Masaüstü için topBar margin değerini geri veriyoruz */
+@media (min-width: 768px) {
+    .topBar {
+        margin-bottom: 3rem;
+    }
 }
 
 .backBtn {
@@ -547,4 +570,146 @@
     50% {
         opacity: 0.8;
     }
+}
+
+/* =============================
+   10. AWWWARDS LEVEL FOOTER
+============================= */
+.footer {
+    position: relative;
+    background-color: #080808;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 6rem 0 0 0;
+    overflow: hidden;
+}
+
+.footerTop {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding-bottom: 4rem;
+}
+
+@media (min-width: 992px) {
+    .footerTop {
+        grid-template-columns: 1.2fr 2fr;
+        gap: 4rem;
+    }
+}
+
+.footerLogo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--color-white);
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.footerMotto {
+    color: var(--color-gray);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 360px;
+}
+
+.footerNavGroup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 640px) {
+    .footerNavGroup {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.footerNavCol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footerNavCol h4 {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.footerNavCol a {
+    color: var(--color-gray);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.footerNavCol a:hover {
+    color: var(--color-white);
+    transform: translateX(4px);
+}
+
+.footerBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0;
+    color: var(--color-gray);
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .footerBottom {
+        flex-direction: row;
+    }
+}
+
+.footerBottom a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.footerBottom a:hover {
+    color: var(--color-primary);
+}
+
+/* DEVA SA DEVAM EDEN MARKA METNİ (BIG TYPOGRAPHY) */
+.bigTextContainer {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    line-height: 0.8;
+    user-select: none;
+    pointer-events: none;
+}
+
+.bigFooterText {
+    font-size: clamp(4.5rem, 18vw, 22rem);
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    text-align: center;
+    white-space: nowrap;
+
+    /* İçi boş, dış çizgili devasa font efekti */
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.06);
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer:hover .bigFooterText {
+    -webkit-text-stroke: 2px rgba(220, 68, 41, 0.25);
+    text-shadow: 0 0 50px rgba(220, 68, 41, 0.1);
 }

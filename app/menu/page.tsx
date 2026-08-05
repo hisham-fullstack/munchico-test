@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { menuData, MenuCategory } from "./menuData";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 const truncateText = (text: string, maxLength: number) => {
   if (text.length <= maxLength) return text;
@@ -11,9 +12,6 @@ const truncateText = (text: string, maxLength: number) => {
   const lastSpace = truncated.lastIndexOf(" ");
   return truncated.slice(0, lastSpace > 0 ? lastSpace : maxLength) + "...";
 };
-
-// GitHub Pages ve Localhost için Next.config ile birebir aynı basePath'i tanımlıyoruz
-const BASE_PATH = "/munchico-test";
 
 export default function MenuPage() {
   const [selectedCategory, setSelectedCategory] = useState<MenuCategory | null>(
@@ -96,7 +94,7 @@ export default function MenuPage() {
                   <div className={styles.floatingImgWrapper}>
                     <Image
                       /* YENİ: Resim yolunun başına BASE_PATH ekleniyor */
-                      src={`${BASE_PATH}${category.items[0]?.img || "/assets/menu/placeholder.webp"}`}
+                      src={`${category.items[0]?.img || "/assets/menu/placeholder.webp"}`}
                       alt={category.categoryName}
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
@@ -160,7 +158,7 @@ export default function MenuPage() {
                   <div className={styles.productImgWrapper}>
                     <Image
                       /* YENİ: Resim yolunun başına BASE_PATH ekleniyor */
-                      src={`${BASE_PATH}${item.img || "/assets/menu/placeholder.webp"}`}
+                      src={`${item.img || "/assets/menu/placeholder.webp"}`}
                       alt={item.name}
                       fill
                       sizes="(max-width: 768px) 100vw, 300px"
@@ -264,7 +262,7 @@ export default function MenuPage() {
                     <div className={styles.sliderImgReveal}>
                       <Image
                         /* YENİ: Resim yolunun başına BASE_PATH ekleniyor */
-                        src={`${BASE_PATH}${selectedCategory.items[selectedProductIndex].img || "/assets/menu/placeholder.webp"}`}
+                        src={`${selectedCategory.items[selectedProductIndex].img || "/assets/menu/placeholder.webp"}`}
                         alt={selectedCategory.items[selectedProductIndex].name}
                         fill
                         sizes="100vw"
@@ -320,6 +318,72 @@ export default function MenuPage() {
           </div>
         )}
       </div>
+      <footer className={styles.footer}>
+        <div className={styles.container}>
+          <div className={styles.footerTop}>
+            {/* Sol: Marka ve Motto */}
+            <div className={styles.footerBrand}>
+              <div className={styles.footerLogo}>
+                <span>MUNCHICO</span>
+                <span className={styles.logoDot}></span>
+              </div>
+              <p className={styles.footerMotto}>
+                Altın sarısı çıtır tavuklar, devasa burgerler ve unutulmaz
+                Munchico lezzet deneyimi.
+              </p>
+            </div>
+
+            {/* Sağ: Hızlı Linkler ve Sosyal Medya */}
+            <div className={styles.footerNavGroup}>
+              <div className={styles.footerNavCol}>
+                <h4>NAVİGASYON</h4>
+                <Link href="/">Anasayfa</Link>
+                <Link href="/#nasil-yapiyoruz">Mutfak Sırları</Link>
+                <Link href="/#hakkimizda">Hikayemiz</Link>
+                <Link href="/#subelerimiz">Demirtaş Şubesi</Link>
+              </div>
+
+              <div className={styles.footerNavCol}>
+                <h4>TAKİP ET</h4>
+                <a
+                  href="https://instagram.com/munchico.fc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+                <a
+                  href="https://tgoyemek.com/restoranlar/466593"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Trendyol Yemek
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Alt Telif ve Imza Satırı */}
+          <div className={styles.footerBottom}>
+            <p>&copy; 2026 Munchico. Tüm hakları saklıdır.</p>
+            <p>
+              Tasarım & Geliştirme:{" "}
+              <a
+                href="https://hexadijital.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>HEXA Dijital</span>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        {/* DEVA SA DEVAM EDEN TİPOGRAFİK İMZA */}
+        <div className={styles.bigTextContainer}>
+          <h1 className={styles.bigFooterText}>MUNCHICO</h1>
+        </div>
+      </footer>
     </main>
   );
 }

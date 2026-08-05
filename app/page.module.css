@@ -523,7 +523,7 @@
 ============================= */
 .videoSection {
   position: relative;
-  height: 60vh;
+  height: 100vh;
   min-height: 500px;
   display: flex;
   align-items: center;
@@ -540,6 +540,12 @@
   width: 100%;
   height: 100%;
   z-index: 0;
+}
+
+.parallaxImage {
+  object-fit: cover;
+  opacity: 0.6;
+  /* Next.js fill prop'u %100 yükseklik verdiği için translateY kullanmıyoruz, böylece alttan kesilmiyor */
 }
 
 .parallaxVideo {

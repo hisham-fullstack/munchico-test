@@ -53,7 +53,7 @@ export default function Header() {
               Hikayemiz
             </Link>
             <Link href="/#subelerimiz" className={styles.navLink}>
-              Şubeler
+              Mekanımız
             </Link>
           </nav>
 

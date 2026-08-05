@@ -46,7 +46,7 @@ export default function Home() {
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            Özel baharatlarla harmanlanmış altın sarısı çıtır tavuklar, dev
+            Özel baharatlarla harmanlanmış nar gibi kızarmış çıtır tavuklar, dev
             burgerler ve enfes makarnalar.
           </p>
         </div>
@@ -66,7 +66,6 @@ export default function Home() {
           </svg>
         </div>
       </header>
-
       {/* --- 2. MARQUEE SECTION --- */}
       <div className={styles.marqueeSection}>
         <div className={styles.marqueeContent}>
@@ -80,7 +79,6 @@ export default function Home() {
           </span>
         </div>
       </div>
-
       {/* --- 3. SLIDER SECTION --- */}
       <section className={styles.sliderSection}>
         <div className={`${styles.container} ${styles.sectionHeader}`}>
@@ -104,7 +102,10 @@ export default function Home() {
             <SwiperSlide>
               <div className={`${styles.productCard} ${styles.cardPrimary}`}>
                 <div className={styles.badge}>BESTSELLER</div>
-                <img src="/assets/menu/1.webp" alt="Chicken Burger" />
+                <img
+                  src="/assets/menu/chicken_burger/inferno.webp"
+                  alt="Chicken Burger"
+                />
                 <div className={styles.cardInfo}>
                   <h3>Chicken Burger</h3>
                   <p>
@@ -115,7 +116,10 @@ export default function Home() {
             </SwiperSlide>
             <SwiperSlide>
               <div className={styles.productCard}>
-                <img src="/assets/menu/2.webp" alt="Çıtır Tavuk" />
+                <img
+                  src="/assets/menu/beef_burger/cheese_burger.webp"
+                  alt="Çıtır Tavuk"
+                />
                 <div className={styles.cardInfo}>
                   <h3>Beef Burger</h3>
                   <p>
@@ -127,7 +131,7 @@ export default function Home() {
             </SwiperSlide>
             <SwiperSlide>
               <div className={styles.productCard}>
-                <img src="/assets/menu/3.webp" alt="Beef Burger" />
+                <img src="/assets/menu/buns/bao_doro.webp" alt="Beef Burger" />
                 <div className={styles.cardInfo}>
                   <h3>BunS</h3>
                   <p>
@@ -138,7 +142,10 @@ export default function Home() {
             </SwiperSlide>
             <SwiperSlide>
               <div className={styles.productCard}>
-                <img src="/assets/menu/4.webp" alt="Penne Makarna" />
+                <img
+                  src="/assets/menu/makarna/snitz_pesto_salad.webp"
+                  alt="Penne Makarna"
+                />
                 <div className={styles.cardInfo}>
                   <h3>Penne Makarna</h3>
                   <p>
@@ -150,7 +157,10 @@ export default function Home() {
             </SwiperSlide>
             <SwiperSlide>
               <div className={`${styles.productCard} ${styles.cardPrimary}`}>
-                <img src="/assets/menu/6.webp" alt="French Fries" />
+                <img
+                  src="/assets/menu/cilgin_kanat/8.webp"
+                  alt="French Fries"
+                />
                 <div className={styles.cardInfo}>
                   <h3>Çılgın Kanatlar</h3>
                   <p>
@@ -182,7 +192,6 @@ export default function Home() {
           </Link>
         </div>
       </section>
-
       {/* --- 4. DELIVERY SECTION --- */}
       <section className={styles.deliverySection} id="delivery">
         <div className={styles.container}>
@@ -208,7 +217,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* --- 5. NASIL YAPIYORUZ SECTION --- */}
       <section className={styles.processSection} id="nasil-yapiyoruz">
         <div className={styles.container}>
@@ -254,11 +262,10 @@ export default function Home() {
               </div>
               <div className={styles.processCard}>
                 <div className={styles.stepNumber}>03</div>
-                <h4>Altın Sarısı Kızartma</h4>
+                <h4>Tam Kıvamında Kızartma</h4>
                 <p>
                   Tam kıvamında, içi sulu dışı çıtır çıtır olacak şekilde, temiz
-                  ve ideal sıcaklıktaki yağda altın sarısı olana dek
-                  pişiriyoruz.
+                  ve ideal sıcaklıktaki yağda nar gibi kızarana dek pişiriyoruz.
                 </p>
               </div>
               <div className={styles.processCard}>
@@ -310,22 +317,15 @@ export default function Home() {
           )}
         </div>
       </section>
-
-      {/* --- 6. PARALLAX VIDEO SECTION --- */}
+      {/* --- 6. PARALLAX GÖRSEL SECTION --- */}
       <section className={styles.videoSection}>
         <div className={styles.parallaxWrapper}>
-          <video
-            className={styles.parallaxVideo}
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            <source
-              src="https://assets.mixkit.co/videos/preview/mixkit-slow-motion-of-a-burger-being-made-16006-large.mp4"
-              type="video/mp4"
-            />
-          </video>
+          <Image
+            src="/assets/img/about_us.webp"
+            alt="Munchico Deneyimi"
+            fill
+            className={styles.parallaxImage}
+          />
           <div className={styles.videoOverlay}></div>
         </div>
         <div className={`${styles.videoContent} ${styles.container}`}>
@@ -333,12 +333,11 @@ export default function Home() {
             MUNCHICO <span className={styles.outlineText}>DENEYİMİ</span>
           </h2>
           <p className={styles.videoDesc}>
-            Kızgın yağın çıtırtısı ve altın sarısı tavukların efsanevi kokusu
-            mutfağımızdan taşıyor.
+            Kızgın yağın çıtırtısı ve nar gibi kızarmış tavukların efsanevi
+            kokusu mutfağımızdan taşıyor.
           </p>
         </div>
-      </section>
-
+      </section>{" "}
       {/* --- 7. YORUMLAR SECTION --- */}
       <section className={styles.testimonialsSection}>
         <div className={styles.container}>
@@ -385,8 +384,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* --- 8. HAKKIMIZDA SECTIONn --- */}
+      {/* --- 8. HAKKIMIZDA SECTION --- */}
       <section className={styles.aboutSection} id="hakkimizda">
         <div className={styles.container}>
           <div className={styles.aboutGrid}>
@@ -430,7 +428,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* --- 9. İLETİŞİM / ŞUBELERİMİZ SECTION --- */}
       <section className={styles.contactSection} id="subelerimiz">
         <div className={styles.container}>
@@ -494,7 +491,7 @@ export default function Home() {
                 <span className={styles.logoDot}></span>
               </div>
               <p className={styles.footerMotto}>
-                Altın sarısı çıtır tavuklar, devasa burgerler ve unutulmaz
+                Nar gibi kızarmış çıtır tavuklar, devasa burgerler ve unutulmaz
                 Munchico lezzet deneyimi.
               </p>
             </div>
