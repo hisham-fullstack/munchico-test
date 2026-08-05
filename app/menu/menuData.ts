@@ -517,14 +517,14 @@ export const menuData: MenuCategory[] = [
       {
         name: "Tam Yağlı Ayran (27.5 Cl)",
         description: "",
-        price: 0,
+        price: 50,
         currency: "TL",
         img: "/assets/menu/icecekler/ayran1.webp",
       },
       {
         name: "Yarım Yağlı Ayran (27.5 Cl)",
         description: "",
-        price: 0,
+        price: 50,
         currency: "TL",
         img: "/assets/menu/icecekler/ayran.webp",
       },
