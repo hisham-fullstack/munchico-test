@@ -287,7 +287,7 @@ export const menuData: MenuCategory[] = [
         name: "Çıtır Tavuk 4'lü",
         description:
           "Sosa batırmalık efsanevi lezzet şöleni! Kusursuz bir çıtırlıkla kaplanmış 4 adet (160 gr) taptaze tavuk parçası. Kendi seçeceğiniz özel sosunuzla bütünleştiğinde her lokmada ayrı bir keyif veren bu çıtırları elinizden bırakamayacaksınız.",
-        price: 299,
+        price: 250,
         currency: "TL",
         img: "/assets/menu/citir_tavuk/4.webp",
       },
@@ -295,7 +295,7 @@ export const menuData: MenuCategory[] = [
         name: "Çıtır Tavuk 6'lı",
         description:
           "Sosa batırmalık efsanevi lezzet şöleni! Kusursuz bir çıtırlıkla kaplanmış 6 adet (240 gr) taptaze tavuk parçası. Özel sosunuzla bütünleştiğinde lezzeti zirveye taşıyan çıtır atıştırmalık.",
-        price: 429,
+        price: 290,
         currency: "TL",
         img: "/assets/menu/citir_tavuk/6.webp",
       },
@@ -303,7 +303,7 @@ export const menuData: MenuCategory[] = [
         name: "Çıtır Tavuk 8'li",
         description:
           "Büyük ziyafetler için dev çıtırlık! Tam 8 adet (320 gr) taptaze ve kusursuz çıtırlıkta tavuk parçası. Seçtiğiniz soslarla lezzetine lezzet katacağınız doyurucu bir tabak.",
-        price: 489,
+        price: 320,
         currency: "TL",
         img: "/assets/menu/citir_tavuk/8.webp",
       },
@@ -311,7 +311,7 @@ export const menuData: MenuCategory[] = [
         name: "Nitz Box",
         description:
           "Açlık krizlerine renkli ve doyurucu bir son! Dışı çıtır çıtır, içi sulu 120 gr tavuğumuza sıcacık patates kızartmaları eşlik ediyor. İşin sırrı ise enfes yancılarda: lilac salatası, yoğurtlu mısır salatası ve sweet chilli soslu iceberg salatası! Tek kutuda koca bir ziyafet.",
-        price: 469,
+        price: 300,
         currency: "TL",
         img: "/assets/menu/citir_tavuk/nitz_box.webp",
       },
@@ -319,7 +319,7 @@ export const menuData: MenuCategory[] = [
         name: "Snitz Chips",
         description:
           "Bazen sadece iyi bir tavuk ve çıtır patates tüm dertleri çözer! İçi sulu sulu, dışı efsane çıtır 120 gr tavuğumuz ve yanında sıcacık patates kızartması. Klasikten şaşmayanlar için günün en doyurucu tabağı.",
-        price: 399,
+        price: 200,
         currency: "TL",
         img: "/assets/menu/citir_tavuk/chips.webp",
       },
@@ -332,7 +332,7 @@ export const menuData: MenuCategory[] = [
         name: "Çıtır Kanat, But 4'lü",
         description:
           "Atıştırmalık krizlerine veya ana öğünlere en çıtır çözüm! 2 nefis kanat ve 2 sulu but (200 gr) ile o çok sevdiğin çıtır tavuk deneyimini zirveye taşıyoruz. Sıcacık ve çıtır çıtır efsane lezzet.",
-        price: 349,
+        price: 270,
         currency: "TL",
         img: "/assets/menu/cilgin_kanat/4.webp",
       },
@@ -340,7 +340,7 @@ export const menuData: MenuCategory[] = [
         name: "Çıtır Kanat, But 6'lı",
         description:
           "Doyasıya yemek isteyenlere! 3 nefis kanat ve 3 sulu but (300 gr) ile masanızı şenlendiriyoruz. Özel kaplamasıyla nar gibi kızarmış, içi sulu sulu tavuk ziyafeti.",
-        price: 439,
+        price: 300,
         currency: "TL",
         img: "/assets/menu/cilgin_kanat/6.webp",
       },
@@ -348,7 +348,7 @@ export const menuData: MenuCategory[] = [
         name: "Çıtır Kanat, But 8'li",
         description:
           "Tavuk krizini tek seferde çözen dev paket! 4 nefis kanat ve 4 sulu but (400 gr) ile tavuğun en çıtır, en lezzetli halini masanıza getiriyoruz.",
-        price: 499,
+        price: 340,
         currency: "TL",
         img: "/assets/menu/cilgin_kanat/8.webp",
       },
@@ -361,7 +361,7 @@ export const menuData: MenuCategory[] = [
         name: "Soğan Halkası 6'lı",
         description:
           "Yemeğinin yanına en çıtır eşlikçi! Dışı çıtır çıtır, içi yumuşacık tam 6 adet nefis soğan halkası. Sevdiğin soslara bandıra bandıra yemek için mükemmel bir tercih.",
-        price: 79,
+        price: 70,
         currency: "TL",
         img: "/assets/menu/korket/onion.webp",
       },
@@ -369,7 +369,7 @@ export const menuData: MenuCategory[] = [
         name: "Patates Kroket 6'lı",
         description:
           "Dışı çıtır çıtır, içi yumuşacık patates dolgusu! İştah kabartan, tam kıvamında kızarmış 6 adet nefis patates çubuğu. Yemeğin yanına efsane bir eşlikçi.",
-        price: 109,
+        price: 100,
         currency: "TL",
         img: "/assets/menu/korket/potato_kroked.webp",
       },
@@ -377,7 +377,7 @@ export const menuData: MenuCategory[] = [
         name: "Hexa Pizza Kroket 6'lı",
         description:
           "Pizzanın en çıtır ve en üçgen hali! Dışı efsane çıtır, içi sıcacık pizza lezzetiyle dolu 6 adet kroket seni bekliyor.",
-        price: 119,
+        price: 120,
         currency: "TL",
         img: "/assets/menu/korket/hexa.webp",
       },
@@ -385,7 +385,7 @@ export const menuData: MenuCategory[] = [
         name: "Mozzarella Kroket 6'lı",
         description:
           "İçi akışkan, dışı efsane çıtır! Baharatlı özel kaplamasıyla nar gibi kızarmış, tam 6 adet sıcacık mozzarella çubuğu. Isırdığınız an uzayan o nefis peynir lezzeti.",
-        price: 139,
+        price: 130,
         currency: "TL",
         img: "/assets/menu/korket/mozarella.webp",
       },
@@ -398,7 +398,7 @@ export const menuData: MenuCategory[] = [
         name: "Patates Kızartması (Sade)",
         description:
           "Sadelikten şaşmayanlar için! Baharat eklemeden, tam kıvamında kızarttığımız doyurucu ve çıtır çıtır patates. Ana yemeğinin yanına efsane bir eşlikçi.",
-        price: 150,
+        price: 100,
         currency: "TL",
         img: "/assets/menu/fries/sade.webp",
       },
@@ -406,7 +406,7 @@ export const menuData: MenuCategory[] = [
         name: "Patates Kızartması (Baharatlı)",
         description:
           "Patates kızartmasını bir üst seviyeye taşıdık! Çıtır çıtır patateslerimizi, damakta iz bırakan efsane kajun baharatıyla harmanladık. Menüye eklenecek harika bir çıtır yancı.",
-        price: 160,
+        price: 110,
         currency: "TL",
         img: "/assets/menu/fries/bahartli.webp",
       },
@@ -414,12 +414,128 @@ export const menuData: MenuCategory[] = [
         name: "Patates Kızartması (Soslu)",
         description:
           "Klasik patates kızartmasını kendi tarzına göre şekillendir! Tam kıvamında kızarttığımız çıtır patateslerimizi, senin seçeceğin favori sosunla buluşturuyoruz. Sosunu seç, lezzeti katla!",
-        price: 200,
+        price: 150,
         currency: "TL",
         img: "/assets/menu/fries/patates_soslu.webp",
       },
     ],
   },
+  {
+    categoryName: "Salatalar",
+    items: [
+      {
+        name: "Yoğurtlu Mısır Salatası",
+        description:
+          "Çıtır tavukların ve burgerlerin yanına ferahlatıcı bir mola! Süzme yoğurdun hafifliği ve tatlı mısır tanelerinin uyumuyla hazırlanan bu nefis salata, ana yemeğinizin lezzetini dengelerken damağınızda serin bir his bırakacak.",
+        price: 60,
+        currency: "TL",
+        img: "/assets/menu/salatalar/win.webp",
+      },
+      {
+        name: "Mor Lahana Salatası",
+        description:
+          "Menünüze renk ve ekstra çıtırlık katın! Taptaze mor lahanaların özenle kıyılıp hafif mayonez ve yoğurt dokunuşuyla harmanlandığı özel salatamız. Her lokmada iştah açan ferahlatıcı bir yancı.",
+        price: 60,
+        currency: "TL",
+        img: "/assets/menu/salatalar/lilac.webp",
+      },
+      {
+        name: "Jalapeno Turşusu",
+        description:
+          "Acı severlerin vazgeçilmez eşlikçisi! Yemeklerinize ufak ama etkili bir heyecan katmak istiyorsanız, tam kıvamında acısıyla iştahınızı ikiye katlayacak taptaze jalapeno turşusu tam size göre.",
+        price: 60,
+        currency: "TL",
+        img: "/assets/menu/salatalar/jalapeno.webp",
+      },
+      {
+        name: "Salatalık Turşusu",
+        description:
+          "Burgerlerin ve çıtır atıştırmalıkların olmazsa olmaz klasiği! Kütür kütür dokusu ve iştah açan ekşi aromasıyla yemeğinizin lezzet fırtınasını dengeleyecek efsane eşlikçi.",
+        price: 60,
+        currency: "TL",
+        img: "/assets/menu/fries/salatalik.webp",
+      },
+    ],
+  },
+
+  {
+    categoryName: "Soslar",
+    items: [
+      {
+        name: "BBQ Sos",
+        description:
+          "İsli ve hafif tatlı aromasıyla etlerin, burgerlerin ve çıtır atıştırmalıkların vazgeçilmez klasiği.",
+        price: 40,
+        currency: "TL",
+        img: "/assets/menu/soslar/bbq.webp",
+      },
+      {
+        name: "Cheddar Sos",
+        description:
+          "Yoğun, akışkan ve sıcacık peynir lezzeti! Patates kızartmalarını ve burgerleri adeta bir ziyafete dönüştüren efsane.",
+        price: 40,
+        currency: "TL",
+        img: "/assets/menu/soslar/cheddar.webp",
+      },
+      {
+        name: "Chipotle Sos",
+        description:
+          "Hafif isli yapısı ve tatlı-acı dengesiyle damak çatlatan, Meksika esintili efsanevi lezzet. Çıtır tavuklarla harika uyum sağlar.",
+        price: 40,
+        currency: "TL",
+        img: "/assets/menu/soslar/chiptole.webp",
+      },
+      {
+        name: "Garlic Sos",
+        description:
+          "Sarımsağın keskin ve iştah açıcı aromasıyla hazırlanan, her lokmada lezzeti katlayan yoğun kıvamlı özel sos.",
+        price: 40,
+        currency: "TL",
+        img: "/assets/menu/soslar/garlic.webp",
+      },
+      {
+        name: "Hardal",
+        description:
+          "Kendine has keskin aromasıyla burger ve sandviçlerinize karakter katan, lezzet dengesini sağlayan klasik.",
+        price: 40,
+        currency: "TL",
+        img: "/assets/menu/soslar/hardal.webp",
+      },
+      {
+        name: "Ranch Sos",
+        description:
+          "Ferahlatıcı otlar ve ipeksi dokusuyla çıtır tavukların en sevilen eşlikçisi. Serinletici ve lezzet artırıcı bir mola.",
+        price: 40,
+        currency: "TL",
+        img: "/assets/menu/soslar/ranch.webp",
+      },
+      {
+        name: "Sarımsaklı Mayonez",
+        description:
+          "Mayonezin ipeksi dokusu ve taze sarımsağın iştah açan birleşimi. Patates kızartmalarının ve atıştırmalıkların yeni favorisi.",
+        price: 40,
+        currency: "TL",
+        img: "/assets/menu/soslar/rasimsakli_mayonez.webp",
+      },
+      {
+        name: "Sweet Chilli Sos",
+        description:
+          "Tatlı ve acının kusursuz uyumu! Çıtır tavuk parçalarını ve soğan halkalarını bandıra bandıra yemek için ideal.",
+        price: 40,
+        currency: "TL",
+        img: "/assets/menu/soslar/sweet_chilli.webp",
+      },
+      {
+        name: "Trüflü Mayonez",
+        description:
+          "Trüf mantarının lüks ve yoğun aromasıyla harmanlanmış, gurme damaklara hitap eden efsanevi mayonez deneyimi.",
+        price: 40,
+        currency: "TL",
+        img: "/assets/menu/soslar/truflu_mayonez.webp",
+      },
+    ],
+  },
+
   {
     categoryName: "İçecekler",
     items: [
