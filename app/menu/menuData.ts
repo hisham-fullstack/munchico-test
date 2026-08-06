@@ -468,7 +468,7 @@ export const menuData: MenuCategory[] = [
           "İsli ve hafif tatlı aromasıyla etlerin, burgerlerin ve çıtır atıştırmalıkların vazgeçilmez klasiği.",
         price: 40,
         currency: "TL",
-        img: "/assets/menu/soslar/bbq.webp",
+        img: "/assets/menu/sos/bbq.webp",
       },
       {
         name: "Cheddar Sos",
@@ -476,7 +476,7 @@ export const menuData: MenuCategory[] = [
           "Yoğun, akışkan ve sıcacık peynir lezzeti! Patates kızartmalarını ve burgerleri adeta bir ziyafete dönüştüren efsane.",
         price: 40,
         currency: "TL",
-        img: "/assets/menu/soslar/cheddar.webp",
+        img: "/assets/menu/sos/cheddar.webp",
       },
       {
         name: "Chipotle Sos",
@@ -484,7 +484,7 @@ export const menuData: MenuCategory[] = [
           "Hafif isli yapısı ve tatlı-acı dengesiyle damak çatlatan, Meksika esintili efsanevi lezzet. Çıtır tavuklarla harika uyum sağlar.",
         price: 40,
         currency: "TL",
-        img: "/assets/menu/soslar/chiptole.webp",
+        img: "/assets/menu/sos/chiptole.webp",
       },
       {
         name: "Garlic Sos",
@@ -492,7 +492,7 @@ export const menuData: MenuCategory[] = [
           "Sarımsağın keskin ve iştah açıcı aromasıyla hazırlanan, her lokmada lezzeti katlayan yoğun kıvamlı özel sos.",
         price: 40,
         currency: "TL",
-        img: "/assets/menu/soslar/garlic.webp",
+        img: "/assets/menu/sos/garlic.webp",
       },
       {
         name: "Hardal",
@@ -500,7 +500,7 @@ export const menuData: MenuCategory[] = [
           "Kendine has keskin aromasıyla burger ve sandviçlerinize karakter katan, lezzet dengesini sağlayan klasik.",
         price: 40,
         currency: "TL",
-        img: "/assets/menu/soslar/hardal.webp",
+        img: "/assets/menu/sos/hardal.webp",
       },
       {
         name: "Ranch Sos",
@@ -508,7 +508,7 @@ export const menuData: MenuCategory[] = [
           "Ferahlatıcı otlar ve ipeksi dokusuyla çıtır tavukların en sevilen eşlikçisi. Serinletici ve lezzet artırıcı bir mola.",
         price: 40,
         currency: "TL",
-        img: "/assets/menu/soslar/ranch.webp",
+        img: "/assets/menu/sos/ranch.webp",
       },
       {
         name: "Sarımsaklı Mayonez",
@@ -516,7 +516,7 @@ export const menuData: MenuCategory[] = [
           "Mayonezin ipeksi dokusu ve taze sarımsağın iştah açan birleşimi. Patates kızartmalarının ve atıştırmalıkların yeni favorisi.",
         price: 40,
         currency: "TL",
-        img: "/assets/menu/soslar/rasimsakli_mayonez.webp",
+        img: "/assets/menu/sos/rasimsakli_mayonez.webp",
       },
       {
         name: "Sweet Chilli Sos",
@@ -524,7 +524,7 @@ export const menuData: MenuCategory[] = [
           "Tatlı ve acının kusursuz uyumu! Çıtır tavuk parçalarını ve soğan halkalarını bandıra bandıra yemek için ideal.",
         price: 40,
         currency: "TL",
-        img: "/assets/menu/soslar/sweet_chilli.webp",
+        img: "/assets/menu/sos/sweet_chilli.webp",
       },
       {
         name: "Trüflü Mayonez",
@@ -532,7 +532,7 @@ export const menuData: MenuCategory[] = [
           "Trüf mantarının lüks ve yoğun aromasıyla harmanlanmış, gurme damaklara hitap eden efsanevi mayonez deneyimi.",
         price: 40,
         currency: "TL",
-        img: "/assets/menu/soslar/truflu_mayonez.webp",
+        img: "/assets/menu/sos/truflu_mayonez.webp",
       },
     ],
   },
