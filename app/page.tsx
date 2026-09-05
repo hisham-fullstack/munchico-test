@@ -66,6 +66,7 @@ export default function Home() {
           </svg>
         </div>
       </header>
+
       {/* --- 2. MARQUEE SECTION --- */}
       <div className={styles.marqueeSection}>
         <div className={styles.marqueeContent}>
@@ -79,7 +80,8 @@ export default function Home() {
           </span>
         </div>
       </div>
-      {/* --- 3. SLIDER SECTION --- */}
+
+      {/* --- 3. SLIDER SECTION (EN SEVİLEN LEZZETLERİMİZ) --- */}
       <section className={styles.sliderSection}>
         <div className={`${styles.container} ${styles.sectionHeader}`}>
           <div className={styles.headerText}>
@@ -114,6 +116,7 @@ export default function Home() {
                 </div>
               </div>
             </SwiperSlide>
+
             <SwiperSlide>
               <div className={styles.productCard}>
                 <img
@@ -129,6 +132,7 @@ export default function Home() {
                 </div>
               </div>
             </SwiperSlide>
+
             <SwiperSlide>
               <div className={styles.productCard}>
                 <img src="/assets/menu/buns/bao_doro.webp" alt="Beef Burger" />
@@ -140,6 +144,7 @@ export default function Home() {
                 </div>
               </div>
             </SwiperSlide>
+
             <SwiperSlide>
               <div className={styles.productCard}>
                 <img
@@ -155,6 +160,7 @@ export default function Home() {
                 </div>
               </div>
             </SwiperSlide>
+
             <SwiperSlide>
               <div className={`${styles.productCard} ${styles.cardPrimary}`}>
                 <img
@@ -192,7 +198,8 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      {/* --- 4. DELIVERY SECTION --- */}
+
+      {/* --- 4. DELIVERY SECTION (SİPARİŞ PLATFORMLARI) --- */}
       <section className={styles.deliverySection} id="delivery">
         <div className={styles.container}>
           <div className={styles.deliveryBox}>
@@ -200,9 +207,11 @@ export default function Home() {
               <h3>LEZZET KAPINDA</h3>
               <h2>
                 SICACIK VE HIZLI <br />
-                <span>SİPARİŞ VER</span>
+                <span>ONLINE SİPARİŞ VER</span>
               </h2>
-              <p>Çıtır çıtır Munchico lezzetleri anında kapında.</p>
+              <p>
+                Favori platformundan tek tıkla siparişini ver, sıcacık gelsin.
+              </p>
             </div>
             <div className={styles.deliveryLogos}>
               <a
@@ -213,10 +222,27 @@ export default function Home() {
               >
                 Trendyol Yemek
               </a>
+              <a
+                href="https://www.yemeksepeti.com/restaurant/x6so/munchico-fried-chicken-x6so"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${styles.platformBtn} ${styles.ys}`}
+              >
+                Yemeksepeti
+              </a>
+              <a
+                href="https://www.migros.com.tr/yemek/munchico-fried-chicken-osmangazi-demirtas-cumhuriyet-mah-st-36a99"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${styles.platformBtn} ${styles.mg}`}
+              >
+                Migros Yemek
+              </a>
             </div>
           </div>
         </div>
       </section>
+
       {/* --- 5. NASIL YAPIYORUZ SECTION --- */}
       <section className={styles.processSection} id="nasil-yapiyoruz">
         <div className={styles.container}>
@@ -317,7 +343,8 @@ export default function Home() {
           )}
         </div>
       </section>
-      {/* --- 6. PARALLAX GÖRSEL SECTION --- */}
+
+      {/* --- 6. MUNCHICO DENEYİMİ (YENİLENMİŞ YÜKSEK OKUNABİLİRLİK) --- */}
       <section className={styles.videoSection}>
         <div className={styles.parallaxWrapper}>
           <Image
@@ -337,8 +364,83 @@ export default function Home() {
             kokusu mutfağımızdan taşıyor.
           </p>
         </div>
-      </section>{" "}
-      {/* --- 7. YORUMLAR SECTION --- */}
+      </section>
+
+      {/* --- 7. MEKANIMIZ & MUTFAK GALERİSİ (YENİ RESİM ALANI) --- */}
+      <section className={styles.gallerySection} id="galeri">
+        <div className={styles.container}>
+          <div className={styles.centerHeader}>
+            <h3>Munchico Atmosferi</h3>
+            <h2>
+              MEKANIMIZDAN <span>KARELER</span>
+            </h2>
+          </div>
+
+          <div className={styles.galleryGrid}>
+            <div className={styles.galleryCard}>
+              <Image
+                src="/assets/img/img1.webp"
+                alt="Munchico Restoran İç Mekan"
+                fill
+                className={styles.galleryImg}
+              />
+              <div className={styles.galleryOverlay}></div>
+            </div>
+
+            <div className={styles.galleryCard}>
+              <Image
+                src="/assets/img/img2.webp"
+                alt="Munchico Mutfak & Hazırlık"
+                fill
+                className={styles.galleryImg}
+              />
+              <div className={styles.galleryOverlay}></div>
+            </div>
+
+            <div className={styles.galleryCard}>
+              <Image
+                src="/assets/img/img3.webp"
+                alt="Munchico Çıtır Tavuk"
+                fill
+                className={styles.galleryImg}
+              />
+              <div className={styles.galleryOverlay}></div>
+            </div>
+
+            <div className={styles.galleryCard}>
+              <Image
+                src="/assets/img/img4.webp"
+                alt="Munchico Burgerler"
+                fill
+                className={styles.galleryImg}
+              />
+              <div className={styles.galleryOverlay}></div>
+            </div>
+
+            <div className={styles.galleryCard}>
+              <Image
+                src="/assets/img/img5.webp"
+                alt="Munchico Pofuduk Buns"
+                fill
+                className={styles.galleryImg}
+              />
+              <div className={styles.galleryOverlay}></div>
+            </div>
+
+            <div className={styles.galleryCard}>
+              <Image
+                src="/assets/img/about_us.webp"
+                alt="Munchico Penne Makarnalar"
+                fill
+                className={styles.galleryImg}
+              />
+              <div className={styles.galleryOverlay}></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- 8. YORUMLAR SECTION --- */}
       <section className={styles.testimonialsSection}>
         <div className={styles.container}>
           <div className={styles.centerHeader}>
@@ -384,7 +486,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* --- 8. HAKKIMIZDA SECTION --- */}
+
+      {/* --- 9. HAKKIMIZDA SECTION --- */}
       <section className={styles.aboutSection} id="hakkimizda">
         <div className={styles.container}>
           <div className={styles.aboutGrid}>
@@ -428,7 +531,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* --- 9. İLETİŞİM / ŞUBELERİMİZ SECTION --- */}
+
+      {/* --- 10. İLETİŞİM / ŞUBELERİMİZ SECTION --- */}
       <section className={styles.contactSection} id="subelerimiz">
         <div className={styles.container}>
           <div className={styles.contactContainer}>
@@ -480,11 +584,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* --- 10. AWWWARDS STİLİ FOOTER --- */}
+
+      {/* --- 11. FOOTER --- */}
       <footer className={styles.footer}>
         <div className={styles.container}>
           <div className={styles.footerTop}>
-            {/* Sol: Marka ve Motto */}
             <div className={styles.footerBrand}>
               <div className={styles.footerLogo}>
                 <span>MUNCHICO</span>
@@ -496,11 +600,11 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Sağ: Hızlı Linkler ve Sosyal Medya */}
             <div className={styles.footerNavGroup}>
               <div className={styles.footerNavCol}>
                 <h4>NAVİGASYON</h4>
                 <Link href="#anasayfa">Anasayfa</Link>
+                <Link href="#galeri">Mekanımız</Link>
                 <Link href="#nasil-yapiyoruz">Mutfak Sırları</Link>
                 <Link href="#hakkimizda">Hikayemiz</Link>
                 <Link href="#subelerimiz">Demirtaş Şubesi</Link>
@@ -522,11 +626,24 @@ export default function Home() {
                 >
                   Trendyol Yemek
                 </a>
+                <a
+                  href="https://www.yemeksepeti.com/restaurant/x6so/munchico-fried-chicken-x6so"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Yemek Sepeti
+                </a>
+                <a
+                  href="https://www.migros.com.tr/yemek/munchico-fried-chicken-osmangazi-demirtas-cumhuriyet-mah-st-36a99"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Migros Yemek
+                </a>
               </div>
             </div>
           </div>
 
-          {/* Alt Telif ve Imza Satırı */}
           <div className={styles.footerBottom}>
             <p>&copy; 2026 Munchico. Tüm hakları saklıdır.</p>
             <p>
@@ -542,7 +659,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* DEVA SA DEVAM EDEN TİPOGRAFİK İMZA */}
         <div className={styles.bigTextContainer}>
           <h1 className={styles.bigFooterText}>MUNCHICO</h1>
         </div>

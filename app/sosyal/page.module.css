@@ -51,7 +51,6 @@
     opacity: 0.6;
 }
 
-/* Sadece eklenen / güncellenen kısım */
 .avatarInner {
     position: relative;
     width: 100%;
@@ -64,16 +63,13 @@
     justify-content: center;
     overflow: hidden;
     padding: 0;
-    /* İç boşluğu tamamen sıfırladık, logo kenarlara dayansın */
 }
 
 .logoImg {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover;
-    /* 'contain' yerine 'cover' veya 'contain' kalıp scale verebilirsin */
     transform: scale(1);
-    /* Görseli çemberin içinde %15 daha büyütür */
 }
 
 .avatarText {
@@ -192,6 +188,10 @@
 
 .ysCard:hover {
     border-color: #ea004b;
+}
+
+.mgCard:hover {
+    border-color: #FF3C00;
 }
 
 /* --- FOOTER --- */

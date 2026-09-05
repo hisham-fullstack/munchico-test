@@ -67,7 +67,7 @@ export default function SosyalPage() {
             <span className={styles.arrow}>↗</span>
           </a>
 
-          {/* TRENDYOL GO */}
+          {/* TRENDYOL YEMEK */}
           <a
             href="https://tgoyemek.com/restoranlar/466593"
             target="_blank"
@@ -77,6 +77,36 @@ export default function SosyalPage() {
             <span className={styles.icon}>🛵</span>
             <div className={styles.linkText}>
               <strong>Trendyol Yemek'ten Sipariş Ver</strong>
+              <small>Sıcak ve hızlı teslimat</small>
+            </div>
+            <span className={styles.arrow}>↗</span>
+          </a>
+
+          {/* YEMEKSEPETİ */}
+          <a
+            href="https://www.yemeksepeti.com/restaurant/x6so/munchico-fried-chicken-x6so"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${styles.linkCard} ${styles.ysCard}`}
+          >
+            <span className={styles.icon}>🍕</span>
+            <div className={styles.linkText}>
+              <strong>Yemeksepeti'nden Sipariş Ver</strong>
+              <small>Sıcak ve hızlı teslimat</small>
+            </div>
+            <span className={styles.arrow}>↗</span>
+          </a>
+
+          {/* MİGROS YEMEK */}
+          <a
+            href="https://www.migros.com.tr/yemek/munchico-fried-chicken-osmangazi-demirtas-cumhuriyet-mah-st-36a99"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${styles.linkCard} ${styles.mgCard}`}
+          >
+            <span className={styles.icon}>🛍️</span>
+            <div className={styles.linkText}>
+              <strong>Migros Yemek'ten Sipariş Ver</strong>
               <small>Sıcak ve hızlı teslimat</small>
             </div>
             <span className={styles.arrow}>↗</span>

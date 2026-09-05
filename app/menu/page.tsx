@@ -375,11 +375,18 @@ export default function MenuPage() {
                   Instagram
                 </a>
                 <a
-                  href="https://tgoyemek.com/restoranlar/466593"
+                  href="https://www.yemeksepeti.com/restaurant/x6so/munchico-fried-chicken-x6so"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Trendyol Yemek
+                  Yemek Sepeti
+                </a>
+                <a
+                  href="https://www.migros.com.tr/yemek/munchico-fried-chicken-osmangazi-demirtas-cumhuriyet-mah-st-36a99"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Migros Yemek
                 </a>
               </div>
             </div>
