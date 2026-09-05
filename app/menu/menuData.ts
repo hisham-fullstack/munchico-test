@@ -4,6 +4,7 @@ export interface MenuItem {
   price: number;
   currency: string;
   img?: string;
+  tag?: string;
 }
 
 export interface MenuCategory {
@@ -12,274 +13,333 @@ export interface MenuCategory {
 }
 
 export const menuData: MenuCategory[] = [
+  // ==========================================
+  // 1. CHICKEN BURGER MENÜLER
+  // ==========================================
   {
-    categoryName: "Chicken Burger",
+    categoryName: "Chicken Burger Menüler",
     items: [
       {
-        name: "Cheeky Chicken Burger",
+        name: "Cheeky Chicken Burger Menü",
         description:
-          "İsmi gibi biraz yaramaz, lezzetiyle çok iddialı! Yumuşacık burger ekmeği arasında 100 gr çıtır tavuk, ferahlatan yoğurtlu mısır salatası ve lezzeti katlayan kıtır soğan ile damakta iz bırakan bir deneyim.",
-        price: 270,
+          "İsmi gibi biraz yaramaz, lezzetiyle çok iddialı! Yumuşacık burger ekmeği arasında 100 gr çıtır tavuk, ferahlatan yoğurtlu mısır salatası ve lezzeti katlayan kıtır soğan ile damakta iz bırakan bir deneyim. Patates ve içecek dahildir.",
+        price: 300,
         currency: "TL",
         img: "/assets/menu/chicken_burger/cheeky.webp",
+        tag: "İçecek + Patates Dahil",
       },
       {
-        name: "İnferno Chicken Burger",
+        name: "İnferno Chicken Burger Menü",
         description:
-          "Acı sevenler toplanın, ateşle oynamaya geldik! 100 gr çıtır tavuğun, sweet chilli sos ve ateşli jalapeno biberiyle buluştuğu inferno burger. Taptaze iceberg marul ve kıtır soğanla taçlandırılan bu efsaneyi denemeye cesaretin var mı?",
-        price: 270,
+          "Acı sevenler toplanın, ateşle oynamaya geldik! 100 gr çıtır tavuğun, sweet chilli sos ve ateşli jalapeno biberiyle buluştuğu inferno burger. Taptaze iceberg marul ve kıtır soğanla taçlandırılan bu efsaneyi denemeye cesaretin var mı? Patates ve içecek dahildir.",
+        price: 310,
         currency: "TL",
         img: "/assets/menu/chicken_burger/inferno.webp",
+        tag: "İçecek + Patates Dahil",
       },
       {
-        name: "Lilac Chicken Burger",
+        name: "Lilac Chicken Burger Menü",
         description:
-          "Rengiyle göz alan, lezzetiyle baş döndüren! Yumuşacık burger ekmeği arasında 100 gr çıtır tavuk, kıtır soğan ve taptaze mor lahana, mayonez ve süzme yoğurttan oluşan özel lilac salatası.",
-        price: 290,
+          "Rengiyle göz alan, lezzetiyle baş döndüren! Yumuşacık burger ekmeği arasında 100 gr çıtır tavuk, kıtır soğan ve taptaze mor lahana, mayonez ve süzme yoğurttan oluşan özel lilac salatası. Patates ve içecek dahildir.",
+        price: 310,
         currency: "TL",
         img: "/assets/menu/chicken_burger/lilac.webp",
+        tag: "İçecek + Patates Dahil",
       },
       {
-        name: "Win Win Chicken Burger",
+        name: "Win Win Chicken Burger Menü",
         description:
-          "Bu lezzet yarışında kaybetmek yok! Yumuşacık burger ekmeği arasında 100 gr çıtır tavuk, eriyen nefis cheddar ve ferahlatıcı ranch sosun kusursuz uyumu. Taptaze iceberg marul ile masadaki zafer senin!",
-        price: 290,
+          "Bu lezzet yarışında kaybetmek yok! Yumuşacık burger ekmeği arasında 100 gr çıtır tavuk, eriyen nefis cheddar ve ferahlatıcı ranch sosun kusursuz uyumu. Taptaze iceberg marul ile masadaki zafer senin! Patates ve içecek dahildir.",
+        price: 310,
         currency: "TL",
         img: "/assets/menu/chicken_burger/win_win.webp",
+        tag: "İçecek + Patates Dahil",
       },
       {
-        name: "BBQ Chicken Burger",
+        name: "BBQ Chicken Burger Menü",
         description:
-          "İçi sulu dışı çıtır 100 gr tavuğun, yoğun aromalı bbq sos ve eriyen cheddar peyniriyle kusursuz uyumu. Jalapeno biberinin hafif heyecanı ve kıtır soğanla tabağa atılan enfes imza.",
-        price: 290,
+          "İçi sulu dışı çıtır 100 gr tavuğun, yoğun aromalı bbq sos ve eriyen cheddar peyniriyle kusursuz uyumu. Jalapeno biberinin hafif heyecanı ve kıtır soğanla tabağa atılan enfes imza. Patates ve içecek dahildir.",
+        price: 330,
         currency: "TL",
         img: "/assets/menu/chicken_burger/bbq.webp",
+        tag: "İçecek + Patates Dahil",
       },
       {
-        name: "Rocca Chicken Burger",
+        name: "Dejavu Chicken Burger Menü",
         description:
-          "Pesto ve rokanın efsanevi uyumu! Yumuşak beyaz ekmekte 100 gr tavuk, taptaze roka, nefis pesto sos, domates ve kıtır soğan bir arada. Ferah ama tam doyurucu bir ziyafet seni bekliyor.",
-        price: 290,
+          "Pesto ve rokanın efsanevi uyumu! Yumuşak beyaz ekmekte 100 gr tavuk, taptaze roka, nefis pesto sos, domates ve kıtır soğan bir arada. Ferah ama tam doyurucu bir ziyafet seni bekliyor. Patates ve içecek dahildir.",
+        price: 330,
         currency: "TL",
         img: "/assets/menu/chicken_burger/naneli.webp",
+        tag: "İçecek + Patates Dahil",
       },
     ],
   },
+
+  // ==========================================
+  // 2. BUNS MENÜLER
+  // ==========================================
   {
-    categoryName: "BunS",
+    categoryName: "BunS Menüler",
     items: [
       {
-        name: "Bao D'oro Bun",
+        name: "Bao D'oro Bun Menü",
         description:
-          "Klasik burgerleri unutun, bulutların üzerinde bir lezzet yolculuğuna çıkıyoruz! Pamuk gibi yumuşacık sade bun ekmeğinin arasında 100 gr içi sulu dışı çıtır tavuk, akışkan cheddar, ferahlatıcı ranch sos ve taptaze iceberg marul.",
-        price: 290,
+          "Klasik burgerleri unutun, bulutların üzerinde bir lezzet yolculuğuna çıkıyoruz! Pamuk gibi yumuşacık sade bun ekmeğinin arasında 100 gr içi sulu dışı çıtır tavuk, akışkan cheddar, ferahlatıcı ranch sos ve taptaze iceberg marul. Patates ve içecek dahildir.",
+        price: 330,
         currency: "TL",
         img: "/assets/menu/buns/bao_doro.webp",
+        tag: "İçecek + Patates Dahil",
       },
       {
-        name: "Pazzo Bun",
+        name: "Pazzo Bun Menü",
         description:
-          "Fesleğen kokusunun çıtır tavukla enfes buluşması! Özel fesleğenli pofuduk bun ekmeği 100 gr çıtır tavuğu sararken; hafif ve ferah lilac salatası damağını şenlendiriyor. Kıtır soğanın dokunuşuyla gurme bir deneyim.",
-        price: 270,
+          "Fesleğen kokusunun çıtır tavukla enfes buluşması! Özel fesleğenli pofuduk bun ekmeği 100 gr çıtır tavuğu sararken; hafif ve ferah lilac salatası damağını şenlendiriyor. Kıtır soğanın dokunuşuyla gurme bir deneyim. Patates ve içecek dahildir.",
+        price: 320,
         currency: "TL",
         img: "/assets/menu/buns/pazzo.webp",
+        tag: "İçecek + Patates Dahil",
       },
       {
-        name: "Rustico Bun",
+        name: "Rustico Bun Menü",
         description:
-          "Sıradan ekmeklere kısa bir mola, sahnede rustico var! Özel baharatlarla hazırlanan acılı ve kekikli pofuduk bun ekmeğinin arasında 100 gr çıtır tavuk. Ekmeğin hafif acısını dengeleyen serinletici yoğurtlu mısır salatası ve kıtır soğanla ezber bozan bir lezzet.",
-        price: 270,
+          "Sıradan ekmeklere kısa bir mola, sahnede rustico var! Özel baharatlarla hazırlanan acılı ve kekikli pofuduk bun ekmeğinin arasında 100 gr çıtır tavuk. Ekmeğin hafif acısını dengeleyen serinletici yoğurtlu mısır salatası ve kıtır soğanla ezber bozan bir lezzet. Patates ve içecek dahildir.",
+        price: 320,
         currency: "TL",
         img: "/assets/menu/buns/rustico.webp",
+        tag: "İçecek + Patates Dahil",
       },
     ],
   },
+
+  // ==========================================
+  // 3. PENNE RIGATE MAKARNA MENÜLER
+  // ==========================================
   {
-    categoryName: "Penne Rigate Makarna",
+    categoryName: "Penne Rigate Makarna Menüler",
     items: [
       {
-        name: "Mac & Cheese Makarna",
+        name: "Snitz Mac Menü",
         description:
-          "Peynir krizlerine en lezzetli çözüm! Özenle hazırlanmış 300 gr penne makarna, yoğun, akışkan ve efsanevi mac and cheese sosumuzla buluştu. Sosu içine hapseden nefis penne dokusuyla bu şölene karşı koyamayacaksınız.",
-        price: 220,
-        currency: "TL",
-        img: "/assets/menu/makarna/mac_and_cheese.webp",
-      },
-      {
-        name: "Snitz Mac",
-        description:
-          "Hem yoğun peynirli makarna hem de çıtır çıtır tavuk! Yoğun ve akışkan mac and cheese sosuyla harmanlanmış 300 gr penne makarnaya, 100 gr çıtır çıtır tavuk parçaları eşlik ediyor. Günün yıldızı olmaya aday.",
-        price: 300,
+          "Hem yoğun peynirli makarna hem de çıtır çıtır tavuk! Yoğun ve akışkan mac and cheese sosuyla harmanlanmış 300 gr penne makarnaya, 100 gr çıtır çıtır tavuk parçaları eşlik ediyor. Günün yıldızı olmaya aday. İçecek dahildir.",
+        price: 310,
         currency: "TL",
         img: "/assets/menu/makarna/snitz_mac.webp",
+        tag: "İçecek Dahil",
       },
       {
-        name: "Snitz Mac Mix Salad",
+        name: "Snitz Mac Mix Salad Menü",
         description:
-          "Tek tabakta dev bir lezzet karnavalı! Akışkan mac and cheese sosuyla harmanlanmış 300 gr penne makarna ve üzerinde 100 gr çıtır tavuk. Yanında ferahlatıcı mor lahanalı lilac salatası, serinletici yoğurtlu mısır salatası ve sweet chilli soslu taptaze iceberg salata.",
-        price: 370,
+          "Tek tabakta dev bir lezzet karnavalı! Akışkan mac and cheese sosuyla harmanlanmış 300 gr penne makarna ve üzerinde 100 gr çıtır tavuk. Yanında ferahlatıcı mor lahanalı lilac salatası, serinletici yoğurtlu mısır salatası ve sweet chilli soslu taptaze iceberg salata. İçecek dahildir.",
+        price: 390,
         currency: "TL",
         img: "/assets/menu/makarna/snitz_curry_salad.webp",
+        tag: "İçecek Dahil",
       },
       {
-        name: "Curry Makarna",
+        name: "SNitz Curry Menü",
         description:
-          "Uzak Doğu'nun büyüleyici esintisi! Özenle hazırlanan 300 gr penne makarna, damak çatlatan nefis köri sosumuzla harmanlandı. Sosu tam kıvamında içine çeken doyurucu penne ile sıradan öğünleri renklendiriyoruz.",
-        price: 220,
-        currency: "TL",
-        img: "/assets/menu/makarna/curry.webp",
-      },
-      {
-        name: "SNitz Curry",
-        description:
-          "Köri aromasının sıcaklığı, çıtır tavuğun efsane dokusuyla birleşti! Özel köri sosumuzla harmanlanmış 300 gr penne makarna ve yanında dışı çıtır, içi sulu 100 gr tavuk parçaları.",
-        price: 300,
+          "Köri aromasının sıcaklığı, çıtır tavuğun efsane dokusuyla birleşti! Özel köri sosumuzla harmanlanmış 300 gr penne makarna ve yanında dışı çıtır, içi sulu 100 gr tavuk parçaları. İçecek dahildir.",
+        price: 290,
         currency: "TL",
         img: "/assets/menu/makarna/snitz_curry.webp",
+        tag: "İçecek Dahil",
       },
       {
-        name: "SNitz Curry Mix Salad",
+        name: "SNitz Curry Mix Salad Menü",
         description:
-          "Renklerin, aromaların ve çıtırtının kusursuz uyumu! 300 gr enfes köri soslu makarna ve 100 gr çıtır tavuk parçaları. Bu sıcak fırtınayı dengeleyen ferah lilac salatası, yoğurtlu mısır salatası ve sweet chilli soslu iceberg salata.",
-        price: 370,
+          "Renklerin, aromaların ve çıtırtının kusursuz uyumu! 300 gr enfes köri soslu makarna ve 100 gr çıtır tavuk parçaları. Bu sıcak fırtınayı dengeleyen ferah lilac salatası, yoğurtlu mısır salatası ve sweet chilli soslu iceberg salata. İçecek dahildir.",
+        price: 360,
         currency: "TL",
         img: "/assets/menu/makarna/snitz_curry_salad.webp",
+        tag: "İçecek Dahil",
       },
       {
-        name: "Pesto Makarna",
+        name: "SNitz Pesto Menü",
         description:
-          "Taptaze bir İtalyan rüzgarı! Fesleğenin ferahlatıcı aromasıyla hazırlanan kremsi pesto sosumuz, 300 gr tam kıvamında penne makarna ile buluştu. Öğününüzü bir lezzet şölenine çevirin.",
-        price: 250,
-        currency: "TL",
-        img: "/assets/menu/makarna/pesto.webp",
-      },
-      {
-        name: "SNitz Pesto",
-        description:
-          "Fesleğenin ferahlığı, çıtır tavuğun efsanevi dokusuyla buluştu! Taptaze pesto sosumuzla harmanlanmış 300 gr penne makarna ve tabağın yıldızı 100 gr çıpçıtır tavuk parçaları.",
-        price: 320,
+          "Fesleğenin ferahlığı, çıtır tavuğun efsanevi dokusuyla buluştu! Taptaze pesto sosumuzla harmanlanmış 300 gr penne makarna ve tabağın yıldızı 100 gr çıpçıtır tavuk parçaları. İçecek dahildir.",
+        price: 310,
         currency: "TL",
         img: "/assets/menu/makarna/snitz_pesto.webp",
+        tag: "İçecek Dahil",
       },
       {
-        name: "Snitz Pesto Mix Salad",
+        name: "Snitz Pesto Mix Salad Menü",
         description:
-          "İtalyan esintisi, çıtır lezzet ve taptaze bir salata şöleni aynı tabakta! 300 gr pesto soslu makarna ve ona eşlik eden 100 gr çıpçıtır tavuk. Tabağı renklendiren lilac salatası, yoğurtlu mısır salatası ve sweet chilli soslu iceberg salata.",
+          "İtalyan esintisi, çıtır lezzet ve taptaze bir salata şöleni aynı tabakta! 300 gr pesto soslu makarna ve ona eşlik eden 100 gr çıpçıtır tavuk. Tabağı renklendiren lilac salatası, yoğurtlu mısır salatası ve sweet chilli soslu iceberg salata. İçecek dahildir.",
         price: 390,
         currency: "TL",
         img: "/assets/menu/makarna/snitz_pesto_salad.webp",
-      },
-
-      {
-        name: "Arrabbiata Makarna",
-        description:
-          "İtalyan mutfağının tatlı sert rüzgarı! Taze domates, sarımsak ve iştah açan hafif bir acının muazzam dengesiyle hazırlanan arrabbiata sosumuz, 300 gr tam kıvamında penne makarna ile buluştu. Acı sevenler için vazgeçilmez bir lezzet şöleni.",
-        price: 250,
-        currency: "TL",
-        img: "",
+        tag: "İçecek Dahil",
       },
       {
-        name: "SNitz Arrabbiata",
+        name: "Snitz Arrabbiata Menü",
         description:
-          "İtalyan ateşi, çıtır tavuğun efsanevi dokusuyla buluştu! Hafif acılı nefis arrabbiata sosumuzla harmanlanmış 300 gr penne makarna ve tabağın yıldızı 100 gr çıpçıtır tavuk parçaları. Acı ve çıtırlığın kusursuz uyumu.",
-        price: 310,
+          "İtalyan ateşi, çıtır tavuğun efsanevi dokusuyla buluştu! Hafif acılı nefis arrabbiata sosumuzla harmanlanmış 300 gr penne makarna ve tabağın yıldızı 100 gr çıpçıtır tavuk parçaları. Acı ve çıtırlığın kusursuz uyumu. İçecek dahildir.",
+        price: 320,
         currency: "TL",
         img: "",
+        tag: "İçecek Dahil",
       },
       {
-        name: "Snitz Arrabbiata Mix Salad",
+        name: "Snitz Arrabbiata Mix Salad Menü",
         description:
-          "İtalyan ateşi, çıtır lezzet ve taptaze bir salata şöleni aynı tabakta! 300 gr hafif acılı arrabbiata soslu makarna ve ona eşlik eden 100 gr çıpçıtır tavuk. Tabağı dengeleyip renklendiren lilac salatası, yoğurtlu mısır salatası ve sweet chilli soslu iceberg salata.",
-        price: 380,
+          "Hafif acılı nefis arrabbiata soslu penne makarna ve 100 gr çıtır tavuk. Yanında ferahlatıcı mor lahanalı lilac salatası, serinletici yoğurtlu mısır salatası ve sweet chilli soslu taptaze iceberg salata. İçecek dahildir.",
+        price: 400,
         currency: "TL",
         img: "",
+        tag: "İçecek Dahil",
       },
     ],
   },
+
+  // ==========================================
+  // 4. BEEF BURGER MENÜLER
+  // ==========================================
   {
-    categoryName: "Et Burger",
+    categoryName: "Beef Burger Menüler",
     items: [
       {
-        name: "Cheese Burger",
+        name: "Cheese Burger Menü",
         description:
-          "Açlığını tek seferde nakavt edecek efsane! Sulu sulu pişmiş 90 gr nefis köfte, sıcacık cheddar ve kıtır soğanın muazzam uyumu. İçindeki ranch sos, fransız turşusu ve taze iceberg maruluyla tam doygunluk garantisi.",
+          "Açlığını tek seferde nakavt edecek efsane! Sulu sulu pişmiş 90 gr nefis köfte, sıcacık cheddar ve kıtır soğanın muazzam uyumu. İçindeki ranch sos, fransız turşusu ve taze iceberg maruluyla tam doygunluk garantisi. Patates ve içecek dahildir.",
         price: 370,
         currency: "TL",
         img: "/assets/menu/beef_burger/cheese_burger.webp",
+        tag: "İçecek + Patates Dahil",
       },
       {
-        name: "Cheese Burger XL",
+        name: "XL Cheese Burger Menü",
         description:
-          "Büyük açlıklara büyük çözüm! Tam kıvamında pişmiş 150 gr nefis köfte, sıcacık cheddar ve kıtır soğanın muazzam uyumu. Ranch sos, fransız turşusu ve taze iceberg maruluyla efsanevi bir burger deneyimi.",
-        price: 440,
+          "Büyük açlıklara büyük çözüm! Tam kıvamında pişmiş 150 gr nefis köfte, sıcacık cheddar ve kıtır soğanın muazzam uyumu. Ranch sos, fransız turşusu ve taze iceberg maruluyla efsanevi bir burger deneyimi. Patates ve içecek dahildir.",
+        price: 450,
         currency: "TL",
         img: "/assets/menu/beef_burger/cheese_burger_xl.webp",
+        tag: "İçecek + Patates Dahil",
       },
     ],
   },
+
+  // ==========================================
+  // 5. SNITZ SANDWICH MENÜLER
+  // ==========================================
   {
-    categoryName: "SNitz Sandwich",
+    categoryName: "SNitz Sandwich Menüler",
     items: [
       {
-        name: "Rine Sandwich",
+        name: "Rine Sandwich Menü",
         description:
-          "Sıradan sandviçleri unut, sahneye Snitz Sandwich çıkıyor! 100 gr nefis çıtır tavuğumuzu eriyen cheddar, kıtır soğan ve o çok sevilen trüflü mayonezimizle hazırladık. Fransız turşusu ve taptaze iceberg maruluyla kıvamını bulan efsane lezzet.",
-        price: 350,
+          "Sıradan sandviçleri unut, sahneye Snitz Sandwich çıkıyor! 100 gr nefis çıtır tavuğumuzu eriyen cheddar, kıtır soğan ve o çok sevilen trüflü mayonezimizle hazırladık. Fransız turşusu ve taptaze iceberg maruluyla kıvamını bulan efsane lezzet. Patates ve içecek dahildir.",
+        price: 360,
         currency: "TL",
         img: "/assets/menu/snitz_sandwich/rine.webp",
+        tag: "İçecek + Patates Dahil",
       },
     ],
   },
+
+  // ==========================================
+  // 6. PAN-SEARED SANDWICH MENÜLER
+  // ==========================================
   {
-    categoryName: "Grilled Sandwich",
+    categoryName: "Pan-Seared Sandwich Menüler",
     items: [
       {
-        name: "Mantarlı Körili Tavuk Sandviç",
+        name: "Mantarlı Körili Tavuk Sandwich Menü",
         description:
-          "Açlığa meydan okuyan, lezzetiyle efsaneleşen dev bir ikili! Yumuşacık iki adet sandviç ekmeği arasında köri sosunun sıcaklığıyla harmanlanmış 150 gr (2x 75 gr) tavuk, nefis mantar ve akışkan krema. Üzerindeki kıtır soğanlarla lezzeti katlanan benzersiz bir şölen.",
+          "Açlığa meydan okuyan, lezzetiyle efsaneleşen dev bir ikili! Yumuşacık iki adet sandviç ekmeği arasında köri sosunun sıcaklığıyla harmanlanmış 150 gr (2x 75 gr) tavuk, nefis mantar ve akışkan krema. Üzerindeki kıtır soğanlarla lezzeti katlanan benzersiz bir şölen. Patates ve içecek dahildir.",
         price: 360,
         currency: "TL",
         img: "/assets/menu/sandwich/mantar.webp",
+        tag: "İçecek + Patates Dahil",
       },
       {
-        name: "Sweet Chilli Tavuk Sandwich",
+        name: "Sweet Chilli Tavuk Sandwich Menü",
         description:
-          "Tatlı ve acının en doyurucu fırtınasına hazır olun! İki adet yumuşacık sandviç ekmeğinin arasına sığdırdığımız 150 gr (2x 75 gr) enfes tavuk, efsanevi sweet chili sosumuzla harmanlandı. Taptaze iceberg marul ve lezzeti katlayan kıtır soğanla taçlandırılan çifte lezzet.",
+          "Tatlı ve acının en doyurucu fırtınasına hazır olun! İki adet yumuşacık sandviç ekmeğinin arasına sığdırdığımız 150 gr (2x 75 gr) enfes tavuk, efsanevi sweet chili sosumuzla harmanlandı. Taptaze iceberg marul ve lezzeti katlayan kıtır soğanla taçlandırılan çifte lezzet. Patates ve içecek dahildir.",
         price: 360,
         currency: "TL",
         img: "/assets/menu/sandwich/sweet.webp",
+        tag: "İçecek + Patates Dahil",
       },
       {
-        name: "Köz Biberli Sandwich",
+        name: "Köz Biberli BBQ Tavuk Sandwich Menü",
         description:
-          "Közlenmiş biberin o nefis isli aroması, tavukla buluşuyor! İki adet yumuşacık sandviç ekmeği arasına sığdırdığımız 150 gr (2x 75 gr) sulu tavuk, taptaze közlenmiş kırmızı biberin enfes tadıyla harmanlanıyor. Taptaze iceberg marul ve kıtır soğanla tamamlanan, her lokmada damak çatlatan efsane bir tat.",
+          "Yumuşacık iki adet sandviç ekmeği arasında nefis köz biber aroması, bbq sos ve 150 gr (2x 75 gr) tavuk parçalarının eşsiz uyumu. Taptaze marul ve kıtır soğanla lezzeti katlanan benzersiz bir şölen. Patates ve içecek dahildir.",
         price: 360,
         currency: "TL",
-        img: "/assets/menu/sandwich/",
+        img: "/assets/menu/sandwich/koz-biberli.jpeg",
+        tag: "İçecek + Patates Dahil",
       },
       {
-        name: "Baharatlı Tereyağlı Sandwich",
+        name: "Baharatlı Tereyağlı Tavuk Sandwich Menü",
         description:
-          "Tereyağının sıcaklığı ve özel baharatların büyüleyici uyumu! İki adet yumuşacık sandviç ekmeğinin arasına sığdırdığımız 150 gr (2x 75 gr) enfes tavuk, gizli baharat karışımımızla eritilmiş nefis tereyağı ile harmanlandı. Iceberg marul ve kıtır soğanın dokunuşuyla zenginleşen bu sandviç, lezzet sınırlarını zorluyor.",
+          "Yumuşacık iki adet sandviç ekmeği arasında özel baharatlar ve erimiş tereyağı ile harmanlanmış 150 gr (2x 75 gr) nefis tavuk parçaları. Patates ve içecek dahildir.",
         price: 360,
         currency: "TL",
-        img: "/assets/menu/sandwich/",
+        img: "/assets/menu/sandwich/tereyagli.jpeg",
+        tag: "İçecek + Patates Dahil",
       },
     ],
   },
+
+  // ==========================================
+  // 7. SNITZ MENÜLER
+  // ==========================================
   {
-    categoryName: "Wrap",
+    categoryName: "SNitz Menüler",
     items: [
       {
-        name: "Fiesta Wrap",
+        name: "SNitz Chips Menü",
         description:
-          "Damakta lezzet festivali başlatmaya hazır mısın? Lavaşın içine sarılmış leziz 100 gr tavuk parçaları, tatlı-acı dengesini kuran sweet chilli sos ve jalapeno ateşi! Kıtır soğan ve taptaze iceberg marulun ferahlığıyla enfes bir dürüm deneyimi.",
-        price: 280,
+          "Bazen sadece iyi bir tavuk ve çıtır patates tüm dertleri çözer! İçi sulu sulu, dışı efsane çıtır 120 gr tavuğumuz ve yanında sıcacık patates kızartması. Klasikten şaşmayanlar için günün en doyurucu tabağı. Patates ve içecek dahildir.",
+        price: 270,
         currency: "TL",
-        img: "/assets/menu/wrap/fiesta.webp",
+        img: "/assets/menu/citir_tavuk/chips.webp",
+        tag: "İçecek + Patates Dahil",
+      },
+      {
+        name: "Nitz Box Menü",
+        description:
+          "Açlık krizlerine renkli ve doyurucu bir son! Dışı çıtır çıtır, içi sulu 120 gr tavuğumuza sıcacık patates kızartmaları eşlik ediyor. İşin sırrı ise enfes yancılarda: lilac salatası, yoğurtlu mısır salatası ve sweet chilli soslu iceberg salatası! Tek kutuda koca bir ziyafet. Patates ve içecek dahildir.",
+        price: 340,
+        currency: "TL",
+        img: "/assets/menu/citir_tavuk/nitz_box.webp",
+        tag: "İçecek + Patates Dahil",
       },
     ],
   },
+
+  // ==========================================
+  // 8. WRAP MENÜLER
+  // ==========================================
+  {
+    categoryName: "Wrap Menüler",
+    items: [
+      {
+        name: "Fiesta Wrap Menü",
+        description:
+          "Damakta lezzet festivali başlatmaya hazır mısın? Lavaşın içine sarılmış leziz 100 gr tavuk parçaları, tatlı-acı dengesini kuran sweet chilli sos ve jalapeno ateşi! Kıtır soğan ve taptaze iceberg marulun ferahlığıyla enfes bir dürüm deneyimi. Patates ve içecek dahildir.",
+        price: 270,
+        currency: "TL",
+        img: "/assets/menu/wrap/fiesta.webp",
+        tag: "İçecek + Patates Dahil",
+      },
+      {
+        name: "Cheesy Wrap Menü",
+        description:
+          "Lavaşın arasında eriyen sıcacık bol peynir ve çıtır tavuk parçalarının enfes lezzet buluşması. Patates ve içecek dahildir.",
+        price: 290,
+        currency: "TL",
+        img: "",
+        tag: "İçecek + Patates Dahil",
+      },
+    ],
+  },
+
+  // ==========================================
+  // 9. ÇITIR TAVUKLAR
+  // ==========================================
   {
     categoryName: "Çıtır Tavuklar",
     items: [
@@ -307,24 +367,12 @@ export const menuData: MenuCategory[] = [
         currency: "TL",
         img: "/assets/menu/citir_tavuk/8.webp",
       },
-      {
-        name: "Nitz Box",
-        description:
-          "Açlık krizlerine renkli ve doyurucu bir son! Dışı çıtır çıtır, içi sulu 120 gr tavuğumuza sıcacık patates kızartmaları eşlik ediyor. İşin sırrı ise enfes yancılarda: lilac salatası, yoğurtlu mısır salatası ve sweet chilli soslu iceberg salatası! Tek kutuda koca bir ziyafet.",
-        price: 300,
-        currency: "TL",
-        img: "/assets/menu/citir_tavuk/nitz_box.webp",
-      },
-      {
-        name: "Snitz Chips",
-        description:
-          "Bazen sadece iyi bir tavuk ve çıtır patates tüm dertleri çözer! İçi sulu sulu, dışı efsane çıtır 120 gr tavuğumuz ve yanında sıcacık patates kızartması. Klasikten şaşmayanlar için günün en doyurucu tabağı.",
-        price: 200,
-        currency: "TL",
-        img: "/assets/menu/citir_tavuk/chips.webp",
-      },
     ],
   },
+
+  // ==========================================
+  // 10. ÇILGIN KANATLAR
+  // ==========================================
   {
     categoryName: "Çılgın Kanatlar",
     items: [
@@ -354,6 +402,10 @@ export const menuData: MenuCategory[] = [
       },
     ],
   },
+
+  // ==========================================
+  // 11. KROKETS
+  // ==========================================
   {
     categoryName: "Krokets",
     items: [
@@ -368,7 +420,7 @@ export const menuData: MenuCategory[] = [
       {
         name: "Patates Kroket 6'lı",
         description:
-          "Dışı çıtır çıtır, içi yumuşacık patates dolgusu! İştah kabartan, tam kıvamında kızarmış 6 adet nefis patates çubuğu. Yemeğin yanına efsane bir eşlikçi.",
+          "Dışı çıtır çıtır, içi yumuşacık patates dolgusu! İştah kabartan, tam kıvamında kızarmış 6 adet nefis patates çubuğu. Yemeğinin yanına efsane bir eşlikçi.",
         price: 100,
         currency: "TL",
         img: "/assets/menu/korket/potato_kroked.webp",
@@ -391,6 +443,10 @@ export const menuData: MenuCategory[] = [
       },
     ],
   },
+
+  // ==========================================
+  // 12. FRENCH FRIES
+  // ==========================================
   {
     categoryName: "French Fries",
     items: [
@@ -420,6 +476,10 @@ export const menuData: MenuCategory[] = [
       },
     ],
   },
+
+  // ==========================================
+  // 13. SALATALAR
+  // ==========================================
   {
     categoryName: "Salatalar",
     items: [
@@ -440,6 +500,15 @@ export const menuData: MenuCategory[] = [
         img: "/assets/menu/salatalar/lilac.webp",
       },
       {
+        name: "Sweet Chilli Soslu Iceberg Salatası",
+        description:
+          "Çıtır çıtır taze iceberg marullar, damakta iz bırakan o tatlı-acı sweet chilli sosla buluştu! Ağır yemeklerin veya çıtır lezzetlerin yanında hem ferahlatıcı hem de nefis bir denge arayanlar için harika bir eşlikçi.",
+        price: 60,
+        currency: "TL",
+        img: "/assets/menu/salatalar/lilac.webp",
+      },
+
+      {
         name: "Jalapeno Turşusu",
         description:
           "Acı severlerin vazgeçilmez eşlikçisi! Yemeklerinize ufak ama etkili bir heyecan katmak istiyorsanız, tam kıvamında acısıyla iştahınızı ikiye katlayacak taptaze jalapeno turşusu tam size göre.",
@@ -453,12 +522,14 @@ export const menuData: MenuCategory[] = [
           "Burgerlerin ve çıtır atıştırmalıkların olmazsa olmaz klasiği! Kütür kütür dokusu ve iştah açan ekşi aromasıyla yemeğinizin lezzet fırtınasını dengeleyecek efsane eşlikçi.",
         price: 60,
         currency: "TL",
-        img: "/assets/menu/fries/salatalik.webp",
+        img: "/assets/menu/salatalar/salatalik.webp",
       },
     ],
   },
 
-  // test
+  // ==========================================
+  // 14. SOSLAR
+  // ==========================================
   {
     categoryName: "Soslar",
     items: [
@@ -537,6 +608,9 @@ export const menuData: MenuCategory[] = [
     ],
   },
 
+  // ==========================================
+  // 15. İÇECEKLER
+  // ==========================================
   {
     categoryName: "İçecekler",
     items: [

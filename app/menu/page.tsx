@@ -24,19 +24,15 @@ export default function MenuPage() {
   const [touchStart, setTouchStart] = useState<number>(0);
   const [touchEnd, setTouchEnd] = useState<number>(0);
 
-  // Görünüm değiştiğinde en üste kaydırma
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [selectedCategory, selectedProductIndex]);
 
-  // YENİ: Telefondaki Fiziksel Geri Tuşunu Dinleyen useEffect
   useEffect(() => {
     const handlePopState = () => {
       if (selectedProductIndex !== null) {
-        // Ürün detayındayken geri basıldıysa kategoriye (ürün listesine) dön
         setSelectedProductIndex(null);
       } else if (selectedCategory !== null) {
-        // Kategori listesindeyken geri basıldıysa ana menüye dön
         setSelectedCategory(null);
       }
     };
@@ -47,19 +43,16 @@ export default function MenuPage() {
     };
   }, [selectedCategory, selectedProductIndex]);
 
-  // YENİ: Kategori Seçildiğinde Çalışacak Fonksiyon
   const handleCategorySelect = (category: MenuCategory) => {
     window.history.pushState({ view: "category" }, "");
     setSelectedCategory(category);
   };
 
-  // YENİ: Ürün Seçildiğinde Çalışacak Fonksiyon
   const handleProductSelect = (index: number) => {
     window.history.pushState({ view: "product" }, "");
     setSelectedProductIndex(index);
   };
 
-  // YENİ: Ekranda Görünen "Geri Dön" Butonları İçin (Tarayıcı geçmişini tetikler)
   const handleGoBack = () => {
     window.history.back();
   };
@@ -106,9 +99,7 @@ export default function MenuPage() {
       <div className={styles.ambientGlow}></div>
 
       <div className={styles.container}>
-        {/* =========================================
-            GÖRÜNÜM 1: KATEGORİ SEÇİM EKRANI
-        ========================================= */}
+        {/* GÖRÜNÜM 1: KATEGORİ SEÇİM EKRANI */}
         {!selectedCategory && (
           <div className={styles.viewFadeIn}>
             <header className={styles.header}>
@@ -125,7 +116,7 @@ export default function MenuPage() {
                 <div
                   key={index}
                   className={styles.floatingCard}
-                  onClick={() => handleCategorySelect(category)} /* DEĞİŞTİ */
+                  onClick={() => handleCategorySelect(category)}
                 >
                   <div className={styles.floatingImgWrapper}>
                     <Image
@@ -148,16 +139,11 @@ export default function MenuPage() {
           </div>
         )}
 
-        {/* =========================================
-            GÖRÜNÜM 2: KATEGORİ İÇİ ÜRÜN LİSTESİ
-        ========================================= */}
+        {/* GÖRÜNÜM 2: KATEGORİ İÇİ ÜRÜN LİSTESİ */}
         {selectedCategory && selectedProductIndex === null && (
           <div className={styles.viewSlideUp}>
             <div className={styles.topBar}>
-              <button
-                onClick={handleGoBack} /* DEĞİŞTİ */
-                className={styles.backBtn}
-              >
+              <button onClick={handleGoBack} className={styles.backBtn}>
                 <svg
                   width="20"
                   height="20"
@@ -188,19 +174,20 @@ export default function MenuPage() {
                 <div
                   key={index}
                   className={styles.productCard}
-                  onClick={() => handleProductSelect(index)} /* DEĞİŞTİ */
+                  onClick={() => handleProductSelect(index)}
                 >
                   <div className={styles.productImgWrapper}>
+                    {item.tag && (
+                      <span className={styles.productTagBadge}>{item.tag}</span>
+                    )}
                     <Image
                       src={`${item.img || "/assets/menu/placeholder.webp"}`}
                       alt={item.name}
                       fill
                       sizes="(max-width: 768px) 100vw, 300px"
                       className={styles.productImg}
-                      priority={
-                        index < 6
-                      } /* YENİ: İlk 6 resmi lazy-load yapmadan anında yükle */
-                    />{" "}
+                      priority={index < 6}
+                    />
                   </div>
                   <div className={styles.productInfo}>
                     <div className={styles.productTitleRow}>
@@ -220,9 +207,7 @@ export default function MenuPage() {
           </div>
         )}
 
-        {/* =========================================
-            GÖRÜNÜM 3: TEKİL ÜRÜN DETAYI (SLIDER)
-        ========================================= */}
+        {/* GÖRÜNÜM 3: TEKİL ÜRÜN DETAYI (SLIDER) */}
         {selectedCategory && selectedProductIndex !== null && (
           <div
             className={styles.viewSlideUp}
@@ -231,10 +216,7 @@ export default function MenuPage() {
             onTouchEnd={handleTouchEnd}
           >
             <div className={styles.topBar}>
-              <button
-                onClick={handleGoBack} /* DEĞİŞTİ */
-                className={styles.backBtn}
-              >
+              <button onClick={handleGoBack} className={styles.backBtn}>
                 <svg
                   width="20"
                   height="20"
@@ -296,6 +278,11 @@ export default function MenuPage() {
 
                 <div className={styles.sliderMain}>
                   <div className={styles.sliderImgWrapper}>
+                    {selectedCategory.items[selectedProductIndex].tag && (
+                      <span className={styles.sliderTagBadge}>
+                        {selectedCategory.items[selectedProductIndex].tag}
+                      </span>
+                    )}
                     <div className={styles.sliderImgReveal}>
                       <Image
                         src={`${selectedCategory.items[selectedProductIndex].img || "/assets/menu/placeholder.webp"}`}
@@ -354,10 +341,10 @@ export default function MenuPage() {
           </div>
         )}
       </div>
+
       <footer className={styles.footer}>
         <div className={styles.container}>
           <div className={styles.footerTop}>
-            {/* Sol: Marka ve Motto */}
             <div className={styles.footerBrand}>
               <div className={styles.footerLogo}>
                 <span>MUNCHICO</span>
@@ -369,7 +356,6 @@ export default function MenuPage() {
               </p>
             </div>
 
-            {/* Sağ: Hızlı Linkler ve Sosyal Medya */}
             <div className={styles.footerNavGroup}>
               <div className={styles.footerNavCol}>
                 <h4>NAVİGASYON</h4>
@@ -399,7 +385,6 @@ export default function MenuPage() {
             </div>
           </div>
 
-          {/* Alt Telif ve Imza Satırı */}
           <div className={styles.footerBottom}>
             <p>&copy; 2026 Munchico. Tüm hakları saklıdır.</p>
             <p>
@@ -415,7 +400,6 @@ export default function MenuPage() {
           </div>
         </div>
 
-        {/* DEVA SA DEVAM EDEN TİPOGRAFİK İMZA */}
         <div className={styles.bigTextContainer}>
           <h1 className={styles.bigFooterText}>MUNCHICO</h1>
         </div>
