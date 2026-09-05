@@ -1,7 +1,10 @@
 import { MetadataRoute } from "next";
 
+// Statik dışa aktarma (output: "export") için gereklidir
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://munchico.com"; // Kendi domaininiz varsa yazın
+  const baseUrl = "https://munchico.com";
 
   return [
     {
