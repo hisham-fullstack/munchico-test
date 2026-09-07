@@ -10,10 +10,10 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   // KENDİ DOMAIN ADRESİNİZ (WhatsApp kapak resmini bulabilmek için tam site adresine ihtiyaç duyar)
-  metadataBase: new URL("https://munchico.com"), // Domain adresinizle değiştirin (örn: https://munchico.com)
+  metadataBase: new URL("https://munchico.com.tr"), // Domain adresinizle değiştirin (örn: https://munchico.com)
 
   title: {
-    default: "Munchico | Demirtaş Lokanta, Çıtır Tavuk & Burger Restoranı",
+    default: "Munchico | Demirtaş Cumhuriyet Çıtır Tavuk & Burger Restoranı",
     template: "%s | Munchico Demirtaş",
   },
   description:

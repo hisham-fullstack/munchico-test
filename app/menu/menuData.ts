@@ -268,7 +268,7 @@ export const menuData: MenuCategory[] = [
           "Yumuşacık iki adet sandviç ekmeği arasında nefis köz biber aroması, bbq sos ve 150 gr (2x 75 gr) tavuk parçalarının eşsiz uyumu. Taptaze marul ve kıtır soğanla lezzeti katlanan benzersiz bir şölen. Patates ve içecek dahildir.",
         price: 360,
         currency: "TL",
-        img: "",
+        img: "/assets/menu/sandwich/koz-biberli.jpeg",
         tag: "İçecek + Patates Dahil",
       },
       {
