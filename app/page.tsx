@@ -562,7 +562,7 @@ export default function Home() {
                     <span
                       style={{ color: "var(--color-primary)", fontWeight: 700 }}
                     >
-                      11:00 - 02:00
+                      10:00 - 00:00
                     </span>
                   </p>
                 </div>
